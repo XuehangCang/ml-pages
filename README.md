@@ -1,5 +1,63 @@
-# Vue 3 + TypeScript + Vite
+# ML Pages
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+<img src="./public/阿里云ESA.png" alt="阿里云ESA" width="220" align="right" />
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+**声明：本项目由阿里云ESA提供加速、计算和保护**
+
+## 项目介绍
+
+ML Pages 是一个面向机器学习/大模型内容展示的静态站点（文章、模型、数据集等），目标是把“内容生产（Markdown）”与“可搜索/可导航的站点体验（前端路由 + 代码高亮 + 数学公式）”打通，便于快速发布研究笔记、模型卡与数据集说明。
+
+
+## 安装与部署
+
+### 环境要求
+
+- Node.js：`^20.19.0` 或 `>=22.12.0`
+- 包管理器：npm（或你习惯的 pnpm/yarn）
+
+### 本地开发
+
+```bash
+npm install
+npm run dev
+```
+
+启动后按终端提示访问本地地址（通常是 `http://localhost:5173`）。
+
+### 生产构建与预览
+
+```bash
+npm run build
+npm run preview
+```
+
+可选：单独执行类型检查
+
+```bash
+npm run type-check
+```
+
+### 实用性
+
+- 用 Markdown 维护内容，适合团队协作与版本管理
+- 以页面化方式组织“研究/模型/数据集”等信息，便于评审快速定位要点
+- 支持代码高亮与公式渲染，覆盖技术文档的常见表达需求
+
+### 创意性
+
+- 将多类内容（研究文章、模型介绍、数据集详情）以统一信息架构呈现，降低阅读与对比成本
+- 内容与展示层分离：内容只需写 Markdown，即可在站点中自然编排与跳转
+
+### 技术深度
+
+- Vue 3 + TypeScript + Vite：模块化组织页面与组件，构建速度快、类型约束清晰
+- Vue Router：基于路由的多视图组织（首页/研究/模型/数据集/详情等）
+- Markdown-it + KaTeX + Highlight.js：实现 Markdown 渲染、数学公式与代码块高亮，提升技术内容表达能力
+- Tailwind CSS：快速构建一致的页面样式与响应式布局
+
+
+
+## 许可与合规
+
+如涉及第三方数据、图片与引用内容，请确保已获得授权或符合相应开源/引用规范。
