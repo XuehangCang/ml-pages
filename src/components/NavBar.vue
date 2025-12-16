@@ -25,6 +25,16 @@ watch(isMenuOpen, (value) => {
         <RouterLink to="/datasets" class="hover:text-white transition-colors" active-class="text-white">Datasets</RouterLink>
         <RouterLink to="/research" class="hover:text-white transition-colors" active-class="text-white">Research</RouterLink>
         <RouterLink to="/about" class="hover:text-white transition-colors" active-class="text-white">About</RouterLink>
+        <a
+          href="https://github.com/XuehangCang/ml-pages"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover:text-white transition-colors inline-flex items-center"
+          aria-label="GitHub repository"
+          title="GitHub"
+        >
+          <img src="/github.svg" alt="GitHub" class="w-5 h-5" />
+        </a>
       </div>
 
       <!-- Mobile Menu Button -->
@@ -54,6 +64,17 @@ watch(isMenuOpen, (value) => {
             <RouterLink to="/research" class="text-2xl font-bold text-zinc-400 hover:text-white transition-colors" active-class="text-white" @click="isMenuOpen = false">Research</RouterLink>
             <RouterLink to="/brand" class="text-2xl font-bold text-zinc-400 hover:text-white transition-colors" active-class="text-white" @click="isMenuOpen = false">Brand</RouterLink>
             <RouterLink to="/about" class="text-2xl font-bold text-zinc-400 hover:text-white transition-colors" active-class="text-white" @click="isMenuOpen = false">About</RouterLink>
+            <a
+              href="https://github.com/XuehangCang/ml-pages"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-2xl font-bold text-zinc-400 hover:text-white transition-colors flex items-center gap-3"
+              aria-label="GitHub repository"
+              @click="isMenuOpen = false"
+            >
+              <img src="/github.svg" alt="GitHub" class="w-7 h-7" />
+              <span>GitHub</span>
+            </a>
         </div>
       </Transition>
     </Teleport>
