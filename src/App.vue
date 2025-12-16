@@ -1,30 +1,47 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+import { RouterView } from 'vue-router'
+import NavBar from './components/NavBar.vue'
 </script>
 
 <template>
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
+    <div class="min-h-screen bg-black text-white selection:bg-green-500 selection:text-black font-sans">
+        <NavBar />
+        <RouterView />
+        <!-- Footer -->
+        <footer class="py-12 border-t border-white/5 bg-black">
+            <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="text-zinc-600 text-sm">
+                    &copy; 2025 ML Pages. All rights reserved.
+                </div>
+                <div class="flex flex-wrap justify-center gap-6 text-sm text-zinc-500">
+                    <RouterLink to="/brand" class="hover:text-zinc-300 transition-colors">Brand</RouterLink>
+                    <RouterLink to="/legal/terms" class="hover:text-zinc-300 transition-colors">User Terms</RouterLink>
+                    <RouterLink to="/legal/privacy" class="hover:text-zinc-300 transition-colors">Privacy Policy
+                    </RouterLink>
+                    <RouterLink to="/legal/usage" class="hover:text-zinc-300 transition-colors">Usage Policy
+                    </RouterLink>
+                </div>
+            </div>
+        </footer>
+    </div>
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+<style>
+/* Custom scrollbar for a cleaner look */
+::-webkit-scrollbar {
+    width: 8px;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+
+::-webkit-scrollbar-track {
+    background: #000;
 }
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
 </style>
